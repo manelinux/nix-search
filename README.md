@@ -15,41 +15,62 @@ There's no single command to see all of them at once, filter by keyword, or dete
 Features
 
 🔍 Search across all scopes at once or pick specific ones
+
 🔑 Keyword filtering to find exactly what you're looking for
+
 👥 Multi-user aware — scans all users' flake profiles and Home Manager installations
+
 🔁 Duplicate detection — find packages installed in more than one scope
+
 📊 Package count per scope
+
 ⚡ Fast and lightweight — pure Bash, no dependencies
 
 Installation
+
 Clone or download the repository, then run the installer:
-bashgit clone https://github.com/yourusername/nix-search.git
+
+git clone https://github.com/yourusername/nix-search.git
+
 cd nix-search
+
 chmod +x install.sh
+
 ./install.sh
+
 The installer will:
 
 Copy nix-search to /usr/local/bin
+
 Add /usr/local/bin to the global PATH in /etc/nixos/configuration.nix (if not already present)
+
 Run nixos-rebuild switch automatically
 
 After installation, nix-search is available system-wide for all users.
+
 Usage
+
 nix-search [options]
 
 Options:
-  -a, --ambit   <scope1,scope2,...>   Scopes to search (default: all)
-                Values: user, global, flake, home-manager, all
+
+  -a, --ambit   <scope1,scope2,...>   Scopes to search (default: all)  Values: user, global, flake, home-manager, all
+
   -k, --keyword <word>                Filter results by keyword (optional)
+
   -c, --count                         Show package count per scope
+
   -d, --duplicates                    Show only packages found in more than one scope
+
   -v, --version                       Show version
+
   -h, --help                          Show help
 
 Note: The -a scope values are in Catalan (usuari, global, flake, home-manager, tots) in the current version. An English version is planned.
 
-Examples
-bash# Show all packages across all scopes
+# Examples
+
+#Show all packages across all scopes
 nix-search
 
 # Show only user-installed packages
