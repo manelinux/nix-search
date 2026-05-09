@@ -69,39 +69,32 @@ nix-search --duplicats
 
 # Find xfce-related duplicates
 nix-search --duplicats -k xfce
-Example Output
-🔍 nix-search v1.5.0
-   Àmbit:    global
-   Keyword:  xfce
-   Recompte: no
-   Duplicats:no
 
-══════════════════════════════════════════
-  🌐 PAQUETS GLOBALS DEL SISTEMA (/run/current-system) (filtrat per: 'xfce')
-══════════════════════════════════════════
-  1c299vsynd0vpbjzflbm4ynvjczrlcm0-xfce4-screensaver-4.20.1
-  33bkjai3114vi9dkw4fb471w60hhkw4r-xfce4-pulseaudio-plugin-0.5.1
-  flh2qmmzircss6qf1babnqbp8l0a1q13-xfce4-terminal-1.1.5
-  fx0ffpy7258wlgqsc6a3cfmyh5y3w9bh-xfce4-panel-4.20.5
-  ...
-  ↳ Total: 17 paquet(s)
-Scopes explained
-ScopeDescriptionusuariPackages installed via nix-env for the current userglobalSystem-wide packages from /run/current-systemflakePer-user Nix flake profiles (scans all users)home-managerPackages managed by Home Manager (scans all users)totsAll of the above
-Uninstall
-bashsudo rm /usr/local/bin/nix-search
-Requirements
 
-NixOS
-Bash 4+
-Standard NixOS tools (nix-env, nix-store)
+# Scopes explained
 
-Contributing
+"usuari" - Packages installed via nix-env for the current user
+
+"global" - System-wide packages from /run/current-system
+
+"flake" - Per-user Nix flake profiles (scans all users)
+
+"home-manager" - Packages managed by Home Manager (scans all users)
+
+"tots" - All of the above
+
+# Uninstall
+sudo rm /usr/local/bin/nix-search
+
+# Requirements
+
+NixOS, Bash 4+, Standard NixOS tools (nix-env, nix-store)
+
+# Contributing
+
 Pull requests and issues are welcome! Some ideas for future improvements:
 
-English scope names
-JSON output (--json)
---no-color flag for piping output
-Show package versions alongside names
+English scope names, JSON output (--json), --no-color flag for piping output, Show package versions alongside names
 
 License
 MIT
